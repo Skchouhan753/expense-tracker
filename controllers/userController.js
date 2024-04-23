@@ -64,7 +64,7 @@ const loginController = async (req, res) => {
     // check user
     const user = await userModel.findOne({ email });
     //user valdiation
-    const { fullName, avatar, _id } = user;
+    const {userName, _id } = user;
     if (!user) {
       return res.status(404).json({
         success: false,
