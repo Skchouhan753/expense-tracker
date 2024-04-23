@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema(
     userName: {
       type: String,
       required: true,
-      // unique: true,
+      unique: true,
     },
     email: {
       type: String,
@@ -23,7 +23,6 @@ const userSchema = new mongoose.Schema(
     versionKey: false,
   }
 );
-
 
 const userModel = mongoose.model("User", userSchema);
 module.exports = {
